@@ -1,3 +1,11 @@
-# Read Me
+# Timeline
 
-## Add dependency install and start steps
+In the project directory, run:
+
+## Install Dependencies
+
+### `npm install`
+
+## Start App
+
+### `npm start`
