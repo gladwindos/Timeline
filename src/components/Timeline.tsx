@@ -24,15 +24,15 @@ export default function Timeline(): ReactElement {
     return { eventNumber, title, description, time };
   };
 
-  const updateEventsState = () => {
-    setEvents((eventsState) => {
-      const prevEvents = eventsState.slice(-4, eventsState.length);
-      const newEvent = createEvent(eventsState);
-      return [...prevEvents, newEvent];
-    });
-  };
-
   useEffect(() => {
+    const updateEventsState = () => {
+      setEvents((eventsState) => {
+        const prevEvents = eventsState.slice(-4, eventsState.length);
+        const newEvent = createEvent(eventsState);
+        return [...prevEvents, newEvent];
+      });
+    };
+
     updateEventsState();
     const interval = setInterval(() => {
       updateEventsState();
